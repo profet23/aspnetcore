@@ -43,6 +43,7 @@ internal class ListAdapter : IAdapter
         errorMessage = null;
         return true;
     }
+
     public virtual bool TryGet(object target, string segment, JsonSerializerOptions serializerOptions, out object value, out string errorMessage)
     {
         if (!TryGetListTypeArgument(target, out _, out errorMessage))
