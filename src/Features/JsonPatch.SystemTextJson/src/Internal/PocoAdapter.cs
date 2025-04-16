@@ -218,11 +218,6 @@ internal class PocoAdapter : IAdapter
         return false;
     }
 
-    protected virtual bool TryConvertValue(object value, Type propertyType, out object convertedValue)
-    {
-        return TryConvertValue(value, propertyType, null, out convertedValue);
-    }
-
     protected virtual bool TryConvertValue(object value, Type propertyType, JsonSerializerOptions serializerOptions, out object convertedValue)
     {
         var conversionResult = ConversionResultProvider.ConvertTo(value, propertyType, serializerOptions);
